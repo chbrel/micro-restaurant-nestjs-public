@@ -21,23 +21,14 @@ async function bootstrap() {
   app.use('/menu', createProxyMiddleware({
     target: `http://${dependenciesConfig.menu_service_url_with_port}`,
     changeOrigin: true,
-    pathRewrite: {
-      [`^/menu`]: '',
-    }
   }));
   app.use('/kitchen', createProxyMiddleware({
     target: `http://${dependenciesConfig.kitchen_service_url_with_port}`,
     changeOrigin: true,
-    pathRewrite: {
-      [`^/kitchen`]: '',
-    }
   }));
   app.use('/dining', createProxyMiddleware({
     target: `http://${dependenciesConfig.dining_service_url_with_port}`,
     changeOrigin: true,
-    pathRewrite: {
-      [`^/dining`]: '',
-    }
   }));
 
   // Run the app

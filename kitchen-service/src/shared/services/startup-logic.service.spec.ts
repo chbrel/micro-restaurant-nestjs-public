@@ -68,7 +68,7 @@ describe('StartupLogicService', () => {
 
     jest.spyOn(connection.models.Recipe, 'find').mockResolvedValueOnce([]);
     jest.spyOn(connection.models.Recipe, 'create').mockImplementationOnce(() =>
-      Promise.resolve(mockRecipe),
+      Promise.resolve(mockRecipe) as any,
     );
     const newRecipe = await service.addRecipe(mockShortName, mockPost, mockCookingSteps, mockMeanCookingTimeInSec);
     expect(newRecipe).toEqual(mockRecipe);

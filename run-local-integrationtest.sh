@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function run_test_with_profile() { # $1 the maven profile to run tests with
+function run_test_with_profile() { # $1 the profile to run tests with
   echo "Starting the full docker-compose in background"
   ./start-all.sh
   echo "Running integration-tests"

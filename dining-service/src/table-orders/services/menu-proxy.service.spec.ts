@@ -62,7 +62,7 @@ describe('MenuProxyService', () => {
       config: { url: `http://${mockDependenciesConfig.menu_service_url_with_port}/menus` },
       status: 200,
       statusText: 'OK',
-    };
+    } as any;
 
     mockOrderingItem = {
       _id: mockMenuItem._id,

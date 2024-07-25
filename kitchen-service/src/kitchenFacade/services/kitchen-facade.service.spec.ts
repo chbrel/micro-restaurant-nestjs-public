@@ -252,7 +252,7 @@ describe('KitchenFacadeService', () => {
       const mockShouldStartAt = mockPreparedItemsList[0].shouldStartAt;
 
       jest.spyOn(preparedItemModel, 'create').mockImplementationOnce(() =>
-        Promise.resolve(mockPreparedItemsList[0]),
+        Promise.resolve(mockPreparedItemsList[0]) as any,
       );
 
       const preparedItem = await service.createPreparedItem(mockShortName, mockRecipe, mockShouldStartAt);
@@ -283,7 +283,7 @@ describe('KitchenFacadeService', () => {
       const mockShouldBeReadyAt = mockPreparationsList[0].shouldBeReadyAt;
 
       jest.spyOn(preparationModel, 'create').mockImplementationOnce(() =>
-        Promise.resolve(mockPreparationsList[0]),
+        Promise.resolve(mockPreparationsList[0]) as any,
       );
 
       const preparation = await service.createPreparation(mockTableNumber, mockPreparedItems, mockShouldBeReadyAt);

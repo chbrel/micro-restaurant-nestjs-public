@@ -110,7 +110,7 @@ describe('MenusService', () => {
   it('should insert a new menu item', async () => {
     jest.spyOn(model, 'find').mockResolvedValueOnce([]);
     jest.spyOn(model, 'create').mockImplementationOnce(() =>
-      Promise.resolve(mockMenuItem),
+      Promise.resolve(mockMenuItem) as any,
     );
     const newMenuItem = await service.create(addMenuItemDto);
     expect(newMenuItem).toEqual(mockMenuItem);

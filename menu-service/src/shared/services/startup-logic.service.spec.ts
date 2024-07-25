@@ -90,7 +90,7 @@ describe('StartupLogicService', () => {
 
     jest.spyOn(connection.models.MenuItem, 'find').mockResolvedValueOnce([]);
     jest.spyOn(connection.models.MenuItem, 'create').mockImplementationOnce(() =>
-      Promise.resolve(mockMenuItem),
+      Promise.resolve(mockMenuItem) as any,
     );
     const newMenuItem = await service.addMenuItem(mockFullName, mockShortName, mockPrice, mockCategory, mockImage);
     expect(newMenuItem).toEqual(mockMenuItem);
@@ -113,7 +113,7 @@ describe('StartupLogicService', () => {
 
     jest.spyOn(connection.models.MenuItem, 'find').mockResolvedValueOnce([]);
     jest.spyOn(connection.models.MenuItem, 'create').mockImplementationOnce(() =>
-      Promise.resolve(mockMenuItem),
+      Promise.resolve(mockMenuItem) as any,
     );
     const newMenuItem = await service.addMenuItem(mockFullName, mockShortName, mockPrice, mockCategory);
     expect(newMenuItem).toEqual(mockMenuItem);

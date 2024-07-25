@@ -55,7 +55,7 @@ describe('StartupLogicService', () => {
 
     jest.spyOn(connection.models.Table, 'find').mockResolvedValueOnce([]);
     jest.spyOn(connection.models.Table, 'create').mockImplementationOnce(() =>
-      Promise.resolve(mockTable),
+      Promise.resolve(mockTable) as any,
     );
     const newTable = await service.addTable(mockNumber);
     expect(newTable).toEqual(mockTable);
