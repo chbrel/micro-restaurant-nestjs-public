@@ -32,7 +32,7 @@ export class TableOrder {
   lines: OrderingLine[];
 
   @ApiProperty()
-  @Prop({ default: null })
+  @Prop({ default: [] })
   preparations: PreparationDto[];
 
   @ApiProperty()
