@@ -42,13 +42,13 @@ Microservice implementation of a restaurant management system
 ##  Common implementation stack
 
 The tech stack is based on:
-* Node 20.16.0 (Latest LTS: Iron)
-* NestJS 10.3.10
-* Typescript 5.5.4
+* Node 22.19.0 (Latest LTS: Jod)
+* NestJS 11.1.6
+* Typescript 5.9.2
 * MongoDB 4.4.15
 * Docker Engine 20.10+
 * Docker Compose 2.6+
-* Unit-tests, Component-tests with Jest 29.7.0, Supertest 7.0.0, frisby 2.1.3 (see `package.json`)
+* Unit-tests, Component-tests with Jest 30.1.3, Supertest 7.1.4, frisby 2.1.3 (see `package.json`)
 
 Each service is dockerized with its DB. The following scripts are provided:
 * `build.sh` compiles and containerizes the service
