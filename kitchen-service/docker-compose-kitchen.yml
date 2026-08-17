@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   kitchen-service:
     image: "nestjs-restaurant/kitchen-service"

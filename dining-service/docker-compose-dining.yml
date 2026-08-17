@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   dining-service:
     image: "nestjs-restaurant/dining-service"
